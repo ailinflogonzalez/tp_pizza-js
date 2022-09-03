@@ -36,45 +36,38 @@ let pizzas = [{
 }
 ]
 
-/*a) Las pizzas que tengan un id impar.*/
+//a) Las pizzas que tengan un id impar.
 pizzas.forEach(impar => {
-  if (impar.id % 2 != 0) {
+  if (impar.id % 2 !== 0) {
     console.log(`Esta pizza tiene el id impar: ${impar.nombre}.`);
     document.write(`Esta pizza tiene el id impar: ${impar.nombre}.<br>`);
   }
 });
 
 
-/* b) ¿Hay alguna pizza que valga menos de $600 ? */
-pizzas.forEach(menor600 =>{
-  if (menor600.precio <= 600){
-    console.log(`Estas pizzas valen menos de 600pe: ${menor600.nombre}`)
-    document.write(`Estas pizzas valen menos de 600pe: ${menor600.nombre}<br>`)
-  } else {
-    console.log(`Ninguna pizza vale menos de 600pe :(`);
-    //intente ponerlo en un document.write pero aparecia 6 veces el mismo msj
-    //y al parecer no puedo utilizar un break(?)
-  }
-})
+// b) ¿Hay alguna pizza que valga menos de $600?
+if (pizzas.some(menos600 => menos600.precio > 600)) {
+  console.log("No hay pizzas que valgan menos de 600pe");
+  document.write("No hay pizzas que valgan menos de 600pe.<br>");
+};
 
 
-/* c) Los nombres de todos las pizzas. */
-pizzas.find(nombre => {
-  console.log(`Tenemos pizzas ${nombre.nombre}.`);
-  document.write(`Tenemos pizzas ${nombre.nombre}.<br>`);
+//c) Los nombres de todos las pizzas.
+pizzas.forEach(listaDeNombres => {
+  console.log(`Tenemos para ofrecerte pizza ${listaDeNombres.nombre}`);
+  document.write(`Tenemos para ofrecerte pizza ${listaDeNombres.nombre}<br>`);
 });
 
 
-/* d) Los precios de las pizzas. */
-pizzas.find(precio =>{
-  console.log(`${precio.nombre}: ${precio.precio}`)
-  document.write(`${precio.nombre}: ${precio.precio}.<br>`)
-})
-
-
-/* e) El nombre de cada pizza con su respectivo precio. */
-pizzas.find(valor => {
-  console.log(`La ${valor.nombre} vale ${valor.precio}.`);
-  document.write(`La ${valor.nombre} vale ${valor.precio}.<br>`);
+//d) Los precios de las pizzas.
+pizzas.forEach(listaDePrecio => {
+  console.log(`La pizza ${listaDePrecio.nombre} tiene un valor de ${listaDePrecio.precio} pesos`);
+  document.write(`La pizza ${listaDePrecio.nombre} tiene un valor de ${listaDePrecio.precio} pesos<br>`);
 });
 
+
+//e) El nombre de cada pizza con su respectivo precio.
+pizzas.forEach(otraListaDePrecios => {
+  console.log(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos`);
+  document.write(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos<br>`);
+});
