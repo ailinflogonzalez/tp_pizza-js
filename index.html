@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-
-<script src="index.js" ></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ASSETS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>pizza sorpresa®</h1>
+    </header>
+    <main>
+      <section class="pizzas-preview">
+        <div class="linea1">
+          <p>1<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+          <p>2<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+        </div>
+        <div class="linea2">
+          <p>3<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+          <p>4<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+        </div>
+        <div class="linea3">
+          <p>5<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+          <p>6<img src="ASSETS/img/pizza_neg.png" class="img-pizza" alt="" /></p>
+        </div>
+      </section>
+      <section class="pizzas-selec">
+        <div class="input-pizza">
+          <label for="select-pizza">Cual vas a pedir hoy?</label>
+          <input type="number" id="select-pizza" name="select-pizza" min="1" max="6" />
+        </div>
+      </section>
+      <section class="pizzas-result"></section>
+      <script src="index.js"></script>
+    </main>
+  </body>
 </html>

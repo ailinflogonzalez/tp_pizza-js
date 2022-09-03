@@ -40,7 +40,7 @@ let pizzas = [{
 pizzas.forEach(impar => {
   if (impar.id % 2 !== 0) {
     console.log(`Esta pizza tiene el id impar: ${impar.nombre}.`);
-    document.write(`Esta pizza tiene el id impar: ${impar.nombre}.<br>`);
+    //document.write(`Esta pizza tiene el id impar: ${impar.nombre}.<br>`);
   }
 });
 
@@ -48,26 +48,26 @@ pizzas.forEach(impar => {
 // b) ¿Hay alguna pizza que valga menos de $600?
 if (pizzas.some(menos600 => menos600.precio > 600)) {
   console.log("No hay pizzas que valgan menos de 600pe");
-  document.write("No hay pizzas que valgan menos de 600pe.<br>");
+  //document.write("No hay pizzas que valgan menos de 600pe.<br>");
 };
 
 
 //c) Los nombres de todos las pizzas.
 pizzas.forEach(listaDeNombres => {
   console.log(`Tenemos para ofrecerte pizza ${listaDeNombres.nombre}`);
-  document.write(`Tenemos para ofrecerte pizza ${listaDeNombres.nombre}<br>`);
+  //document.write(`Tenemos para ofrecerte pizza ${listaDeNombres.nombre}<br>`);
 });
 
 
 //d) Los precios de las pizzas.
 pizzas.forEach(listaDePrecio => {
   console.log(`La pizza ${listaDePrecio.nombre} tiene un valor de ${listaDePrecio.precio} pesos`);
-  document.write(`La pizza ${listaDePrecio.nombre} tiene un valor de ${listaDePrecio.precio} pesos<br>`);
+  //document.write(`La pizza ${listaDePrecio.nombre} tiene un valor de ${listaDePrecio.precio} pesos<br>`);
 });
 
 
 //e) El nombre de cada pizza con su respectivo precio.
 pizzas.forEach(otraListaDePrecios => {
   console.log(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos`);
-  document.write(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos<br>`);
+  //document.write(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos<br>`);
 });
