@@ -71,3 +71,22 @@ pizzas.forEach(otraListaDePrecios => {
   console.log(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos`);
   //document.write(`${otraListaDePrecios.nombre}: $${otraListaDePrecios.precio} pesos<br>`);
 });
+
+//-------------------------------------------------------------------------------------------------------
+
+const getValueInput = () => {
+  const nombreDePizza = document.getElementById("select-pizza").value;
+  document.getElementById("nombrePizza").innerHTML = nombreDePizza;
+  //  return nombreDePizza;
+  const precioDePizza = document.getElementById("select-pizza").value;
+  document.getElementById("precioPizza").innerHTML = precioDePizza;
+  //  return precioDePizza;
+  document.getElementById("form").addEventListener('submit', (e) => {
+    e.preventDefault();
+  });
+}
+
+
+
+
+
