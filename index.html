@@ -31,34 +31,27 @@
       </section>
       <section class="pizzas-selec">
         <div class="input-pizza">
-          <label for="select-pizza">Cual vas a pedir hoy?</label>
+          <label>Cual vas a pedir hoy?</label>
           <form id="form">
-            <input
-              type="number"
-              class="num-input"
-              id="select-pizza"
-              min="1"
-              max="6"
-              placeholder="Elige un numero del 1 al 6."
-            />
-            <input type="submit" class="but-submit" id="btn-submit" value="submit" onclick="getValueInput()" />
+            <input type="number" id="inputId" placeholder="Elegi un número del 1 al 6." min="1" max="6" />
+            <button type="button" id="btn">Enviar</button>
           </form>
         </div>
       </section>
       <section class="pizzas-resultado">
-        <div class="resultado-contain">
+        <!--         <div class="resultado-contain">
           <h2 id="nombrePizza">AQUI VA EL NOMBRE DE LA PIZZA</h2>
           <ul>
             <li>
               <h4 id="precioPizza">ACA VA EL PRECIO</h4>
             </li>
-            <!-- <li><h4>ACA VA LOS INGREDIENTES</h4></li> -->
+             <li><h4>ACA VA LOS INGREDIENTES</h4></li>
           </ul>
-        </div>
+        </div> -->
       </section>
+      <script src="ASSETS/index.js"></script>
       <script src="ASSETS/utils.js"></script>
       <script src="ASSETS/validation.js"></script>
-      <script src="ASSETS/index.js"></script>
     </main>
   </body>
 </html>

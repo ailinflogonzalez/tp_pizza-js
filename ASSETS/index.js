@@ -74,17 +74,16 @@ pizzas.forEach(otraListaDePrecios => {
 
 //-------------------------------------------------------------------------------------------------------
 
-const getValueInput = () => {
-  const nombreDePizza = document.getElementById("select-pizza").value;
-  document.getElementById("nombrePizza").innerHTML = nombreDePizza;
-  //  return nombreDePizza;
-  const precioDePizza = document.getElementById("select-pizza").value;
-  document.getElementById("precioPizza").innerHTML = precioDePizza;
-  //  return precioDePizza;
-  document.getElementById("form").addEventListener('submit', (e) => {
-    e.preventDefault();
-  });
-}
+const btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+  const valorId = document.getElementById("inputId");
+  console.log(valorId.value);
+});
+
+const submit = document.getElementById("form").addEventListener('submit', (e) => {
+  e.preventDefault();
+});
+//-------------------------------------------------------------------------------------------------------
 
 
 
